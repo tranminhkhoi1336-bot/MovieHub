@@ -1,0 +1,796 @@
+
+/* THANH MENU MOVIEHUB */
+.moviehub-navbar {
+    background: #111827;
+    border-bottom: 1px solid #303b50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.moviehub-navbar > .container {
+    max-width: 1400px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 20px;
+}
+
+.moviehub-navbar a {
+    transition: color 0.2s ease;
+}
+
+.moviehub-navbar a:hover {
+    color: #ff914d;
+}
+
+/* CHAN TRANG MOVIEHUB */
+.moviehub-footer {
+    background: linear-gradient(135deg, #111827, #182335);
+    border-top: 1px solid #364357;
+    color: #e5e7eb;
+    margin-top: 70px;
+}
+
+.mh-footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 60px 24px 40px;
+}
+
+.mh-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 45px;
+}
+
+.mh-footer-logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ff914d;
+    margin-bottom: 18px;
+}
+
+.mh-footer-description {
+    font-size: 15px;
+    color: #aebbd0;
+    line-height: 1.9;
+    max-width: 340px;
+}
+
+.mh-footer-heading {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 22px;
+}
+
+.mh-footer-link {
+    display: block;
+    color: #b5c0d1;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.mh-footer-link:hover {
+    color: #ff914d;
+    padding-left: 4px;
+}
+
+.mh-footer-note {
+    color: #b5c0d1;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.mh-footer-bottom {
+    border-top: 1px solid #364357;
+    padding-top: 25px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #96a4ba;
+    font-size: 13px;
+}
+
+.mh-footer-bottom a {
+    color: #ff914d;
+}
+
+@media (max-width: 900px) {
+    .mh-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mh-footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-footer-container {
+        padding: 40px 20px;
+    }
+}
+
+/* BANNER TRANG CHU MOVIEHUB */
+
+.mh-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 430px;
+    padding: 65px 55px;
+    margin-bottom: 55px;
+    border-radius: 22px;
+    border: 1px solid #37465c;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(255, 111, 60, 0.3),
+            transparent 35%
+        ),
+        linear-gradient(
+            115deg,
+            #111827 0%,
+            #1d2940 55%,
+            #3b2631 100%
+        );
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+/* Anh sang trang tri */
+.mh-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -100px;
+    top: -120px;
+    border-radius: 50%;
+    background: rgba(255, 145, 77, 0.1);
+    filter: blur(30px);
+    z-index: -1;
+}
+
+.mh-hero::after {
+    content: "MOVIEHUB";
+    position: absolute;
+    right: 4%;
+    top: 42%;
+    transform: rotate(-12deg);
+    font-size: 78px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: rgba(255, 255, 255, 0.045);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.mh-hero-badge {
+    display: inline-block;
+    background: rgba(255, 145, 77, 0.13);
+    color: #ff914d;
+    border: 1px solid rgba(255, 145, 77, 0.35);
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.mh-hero-title {
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.2;
+    font-weight: 900;
+    max-width: 750px;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.mh-hero-title span {
+    display: block;
+    color: #ff914d;
+}
+
+.mh-hero-description {
+    max-width: 660px;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .mh-hero {
+        padding: 40px 24px;
+        min-height: auto;
+        border-radius: 16px;
+    }
+
+    .mh-hero-title {
+        font-size: 32px;
+    }
+
+    .mh-hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .mh-hero::after {
+        display: none;
+    }
+}
+
+/* ANH NEN DIEN ANH TRANG CHU */
+.mh-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 19, 32, 0.98) 0%,
+            rgba(12, 19, 32, 0.93) 42%,
+            rgba(12, 19, 32, 0.60) 70%,
+            rgba(12, 19, 32, 0.30) 100%
+        ),
+        url('/img/banner-cinema.jpg') center center / cover no-repeat;
+
+    background-color: #172033;
+    min-height: 470px;
+}
+
+/* Bo dong chu trang tri de thay anh phim */
+.mh-hero::after {
+    display: none;
+}
+
+/* Dam bao chu hien thi ro */
+.mh-hero-title,
+.mh-hero-description,
+.mh-hero-badge {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .mh-hero {
+        background-position: 65% center;
+        min-height: auto;
+    }
+}
+
+/* DANH SACH PHIM MOVIEHUB */
+
+.popular-movies h2,
+.now-playing-movies h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    padding-left: 14px;
+    border-left: 4px solid #ff914d;
+}
+
+.mh-movie-grid > * {
+    min-width: 0;
+    background: #253248;
+    border: 1px solid #3b4860;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.mh-movie-grid > *:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    border-color: #ff914d;
+}
+
+.mh-movie-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.mh-movie-grid > *:hover img {
+    transform: scale(1.04);
+}
+
+/* THE PHIM MOVIEHUB */
+
+.mh-movie-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #253248;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Poster */
+.mh-movie-poster {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: #111827;
+}
+
+.mh-movie-grid .mh-movie-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.mh-movie-grid .mh-movie-card:hover img {
+    transform: scale(1.07);
+}
+
+/* Lop phu khi di chuot */
+.mh-movie-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mh-movie-poster:hover .mh-movie-overlay {
+    opacity: 1;
+}
+
+/* Noi dung */
+.mh-movie-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    gap: 12px;
+}
+
+.mh-movie-title {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mh-movie-title:hover {
+    color: #ff914d;
+}
+
+.mh-movie-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.mh-movie-rating {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.mh-movie-date {
+    color: #aebbd0;
+}
+
+.mh-movie-genres {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.5;
+    
+display: -webkit-box;
+-webkit-line-clamp: 2;
+line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+
+}
+
+/* Nut xem chi tiet */
+.mh-movie-button {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 12px;
+    border-radius: 9px;
+    background: #ff914d;
+    color: #111827;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.mh-movie-button:hover {
+    background: #ffad79;
+    color: #111827;
+}
+
+/* MENU DIEN THOAI MOVIEHUB */
+.mh-mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .moviehub-navbar > .container {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start !important;
+        gap: 0 12px !important;
+        padding: 12px 16px !important;
+    }
+
+    .moviehub-navbar > .container > ul {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .moviehub-navbar > .container > ul > li {
+        display: none !important;
+        width: 100%;
+        margin: 0 !important;
+        padding: 9px 0;
+        list-style: none;
+    }
+
+    .moviehub-navbar > .container > ul > li:first-child {
+        display: block !important;
+        width: auto;
+        padding: 0;
+    }
+
+    .mh-mobile-menu-toggle {
+        display: block !important;
+        grid-column: 2;
+        grid-row: 1;
+        background: #ff914d;
+        color: #111827;
+        font-size: 24px;
+        border-radius: 8px;
+        padding: 5px 13px;
+        cursor: pointer;
+    }
+
+    .moviehub-navbar > .container > div {
+        display: none !important;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    .moviehub-navbar.mh-mobile-open
+    > .container > ul > li:not(:first-child) {
+        display: block !important;
+    }
+
+    .moviehub-navbar.mh-mobile-open
+    > .container > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    /* BANNER TRANG CHU */
+    .mh-hero {
+        padding: 30px 20px !important;
+        min-height: auto !important;
+    }
+
+    .mh-hero h1 {
+        font-size: clamp(28px, 8vw, 36px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .mh-hero p {
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+}
+
+/* MOVIEHUB - DANH SACH PHIM TREN DIEN THOAI */
+
+@media screen and (max-width: 767px) {
+
+    /* Hai poster tren mot hang */
+    .mh-movie-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+        width: 100%;
+    }
+
+    /* Khong cho the phim tran cot */
+    .mh-movie-grid > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Poster phim */
+    .mh-movie-grid img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+    }
+
+    /* Phan thong tin phim */
+    .mh-movie-grid .mh-movie-body {
+        padding: 10px !important;
+        gap: 8px !important;
+    }
+
+    /* Ten phim */
+    .mh-movie-grid .mh-movie-title {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        overflow-wrap: anywhere;
+    }
+
+    /* The loai phim */
+    .mh-movie-grid .mh-movie-genres {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Nut xem chi tiet */
+    .mh-movie-grid .mh-movie-button {
+        font-size: 12px !important;
+        padding: 10px 6px !important;
+    }
+}
+
+/* CHI TIET PHIM - DIEN THOAI */
+@media screen and (max-width: 767px) {
+
+    .mh-mobile-detail-poster {
+        display: block !important;
+        width: 220px !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .mh-mobile-detail-title {
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+        overflow-wrap: break-word;
+    }
+}
+
+/* MOVIEHUB - SO DO GHE TREN DIEN THOAI */
+
+@media screen and (max-width: 767px) {
+
+    .mh-mobile-seat-scroll {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        justify-content: flex-start !important;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 0 18px;
+        box-sizing: border-box;
+    }
+
+    .mh-mobile-seat-scroll #seatGrid {
+        display: grid !important;
+        grid-template-columns: repeat(10, minmax(48px, 1fr)) !important;
+        width: max-content !important;
+        min-width: 600px !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: start !important;
+    }
+}
+
+/* LICH SU DAT VE - MOBILE */
+
+@media screen and (max-width: 767px) {
+
+    .mh-history-scroll {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        padding: 12px !important;
+        box-sizing: border-box;
+    }
+
+    .mh-history-table,
+    .mh-history-table tbody {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .mh-history-table thead {
+        display: none !important;
+    }
+
+    /* Moi don ve la mot the */
+    .mh-history-table tbody tr {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding: 12px 0 !important;
+        background: #1b283b;
+        border: 1px solid #475569;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .mh-history-table tbody td {
+        display: block !important;
+        position: relative;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        padding: 9px 10px 9px 112px !important;
+        border: none !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
+
+    /* Nhan cua tung thong tin */
+    .mh-history-table tbody td::before {
+        position: absolute;
+        left: 10px;
+        top: 9px;
+        width: 92px;
+        color: #ff914d;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .mh-history-table td:nth-child(1)::before {
+        content: "Mã đơn:";
+    }
+
+    .mh-history-table td:nth-child(2)::before {
+        content: "Tên phim:";
+    }
+
+    .mh-history-table td:nth-child(3)::before {
+        content: "Suất chiếu:";
+    }
+
+    .mh-history-table td:nth-child(4)::before {
+        content: "Số vé:";
+    }
+
+    .mh-history-table td:nth-child(5)::before {
+        content: "Ghế:";
+    }
+
+    .mh-history-table td:nth-child(6)::before {
+        content: "Tổng tiền:";
+    }
+
+    .mh-history-table td:nth-child(7)::before {
+        content: "Trạng thái:";
+    }
+
+    .mh-history-table a,
+    .mh-history-table button {
+        display: inline-block;
+        max-width: 100% !important;
+        white-space: normal !important;
+        font-size: 12px !important;
+        box-sizing: border-box;
+    }
+}
+
+/* CAN DEU NUT XEM CHI TIET - MOVIEHUB */
+
+/* Cac the phim trong cung hang cao bang nhau */
+.cinema-grid {
+    align-items: stretch;
+}
+
+/* The phim sap xep theo chieu doc */
+.cinema-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Phan thong tin chiem khoang trong con lai */
+.cinema-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Nut Xem chi tiet nam sat cuoi the phim */
+.cinema-info > a {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Sửa giao diện phân trang */
+.pagination {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.pagination li {
+    display: inline-flex !important;
+    margin: 0;
+}
+
+.pagination li a,
+.pagination li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    background: #2d3748;
+    color: white;
+    text-decoration: none;
+}
+
+.pagination li.active span,
+.pagination li.active a {
+    background: #ff914d;
+    border-color: #ff914d;
+    color: #111827;
+}
